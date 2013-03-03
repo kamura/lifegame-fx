@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="lifegame.LifegameController">
+  <children>
+    <VBox prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Pane id="" prefHeight="64.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(to bottom right, #ff7ff0, #3333cd);&#10;" />
+        <Pane id="canvas" prefHeight="436.0" prefWidth="500.0" />
+      </children>
+    </VBox>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <children>
+        <Button fx:id="button" onAction="#handleStartButtonAction" text="Start">
+          <effect>
+            <Reflection>
+              <input>
+                <Lighting surfaceScale="5.0">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant azimuth="-135.0" />
+                  </light>
+                </Lighting>
+              </input>
+            </Reflection>
+          </effect>
+        </Button>
+        <Button id="button" onAction="#handleStopButtonAction" text="Stop">
+          <effect>
+            <Reflection>
+              <input>
+                <Lighting surfaceScale="5.0">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant azimuth="-135.0" />
+                  </light>
+                </Lighting>
+              </input>
+            </Reflection>
+          </effect>
+        </Button>
+        <Button id="button" onAction="#handleResetButtonAction" text="Reset">
+          <effect>
+            <Reflection>
+              <input>
+                <Lighting surfaceScale="5.0">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant azimuth="-135.0" />
+                  </light>
+                </Lighting>
+              </input>
+            </Reflection>
+          </effect>
+        </Button>
+      </children>
+      <effect>
+        <DropShadow offsetX="5.0" offsetY="5.0">
+          <color>
+            <Color blue="0.392" green="0.392" red="0.392" fx:id="x1" />
+          </color>
+        </DropShadow>
+      </effect>
+    </HBox>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <Label prefHeight="26.0" prefWidth="135.0" text="Game Of Life" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="351.0" AnchorPane.topAnchor="12.0">
+      <effect>
+        <DropShadow color="$x1" offsetX="5.0" offsetY="5.0">
+          <input>
+            <Reflection />
+          </input>
+        </DropShadow>
+      </effect>
+      <font>
+        <Font name="Times New Roman Bold" size="16.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
